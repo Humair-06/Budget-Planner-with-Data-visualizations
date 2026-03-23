@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finance Planner</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+<h1>Personal Finance Planner</h1>
+
+<h3>Add Transaction</h3>
+
+<input v-model="amount" placeholder="Amount">
+
+<select v-model="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Bills</option>
+<option>Shopping</option>
+<option>Other</option>
+</select>
+
+<select v-model="type">
+<option value="income">Income</option>
+<option value="expense">Expense</option>
+</select>
+
+<button @click="addTransaction()">Add</button>
+
+<h2>Transactions</h2>
+
+<ul>
+<li v-for="t in transactions">
+{{t.type}} - {{t.category}} - ₹{{t.amount}}
+</li>
+</ul>
+
+<canvas id="expenseChart"></canvas>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

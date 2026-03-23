@@ -1,0 +1,93 @@
+/* Global Style */
+
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Main Container */
+
+#app{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    width:600px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Title */
+
+h1{
+    text-align:center;
+    color:#333;
+    margin-bottom:25px;
+}
+
+/* Form Section */
+
+input, select{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+/* Button */
+
+button{
+    width:100%;
+    padding:12px;
+    background:#4facfe;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#00c6ff;
+}
+
+/* Transaction List */
+
+ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+li{
+    background:#f7f7f7;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:6px;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+
+/* Chart Section */
+
+canvas{
+    margin-top:30px;
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+#app{
+width:90%;
+}
+
+}
